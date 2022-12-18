@@ -42,7 +42,42 @@ SELECT LTRIM('       SMITA') AS REMOVE;
 SELECT RTRIM('SMITA       ') AS REMOVE;
 SELECT RTRIM(LTRIM(TYPE)) AS REMOVE;
 
+select * FROM college_details;
+SELECT CONCAT('Place', 'Type') AS MERGE;
+SELECT LENGTH(Collegename) FROM college_details ORDER BY ID DESC;
+SELECT INSTR(Place, 'l') AS POSITION;
+SELECT INSTR(Aided, 'S')  FROM college_details;
+SELECT SUBSTR('Principlename',3,6) AS SUBSTR;
+SELECT LTRIM('       Somu') AS REMOVE;
+SELECT RTRIM('Somu       ') AS REMOVE;
+SELECT RTRIM(LTRIM(TYPE)) AS REMOVE;
 
+
+SELECT COUNT(Place) from college_details;
+SELECT COUNT(Collegename) from college_details;
+SELECT COUNT(Type) from college_details;
+
+SELECT SUM(Code) from college_details;
+SELECT SUM(CETCollegefees) from college_details;
+SELECT SUM(MANAGEMENTCollegefees) from college_details;
+
+Select MIN(CETCollegefees) From college_details;
+Select MIN(MANAGEMENTCollegefees) From college_details;
+Select MIN(Code) From college_details;
+
+select MAX(MANAGEMENTCollegefees) from college_details;
+select MAX(CETCollegefees) from college_details;
+select MAX(Code) from college_details;
+
+SELECT AVG(Code) from college_details;
+SELECT AVG(CETCollegefees) from college_details;
+SELECT AVG(MANAGEMENTCollegefees) from college_details;
+
+ALTER TABLE college_details MODIFY COLUMN Collegename VARCHAR(40);
+ALTER TABLE college_details MODIFY COLUMN Code int(40);
+DESC college_details;
+ALTER TABLE college_details MODIFY COLUMN CETCollegefees VARCHAR(40);
+DESC college_details;
 
 
 
