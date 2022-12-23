@@ -42,6 +42,7 @@ INSERT INTO hospital VALUES('Sangeeta', 'Cardiologist','morning','Heart',8);
 INSERT INTO hospital VALUES('Saniya', 'ENT','Night','ENT',8);
 INSERT INTO hospital VALUES('Savita', 'Pediatrition','Night','Children',8);
 SELECT *FROM hospital;
+
 SELECT TIMING FROM bus_details WHERE BUSNO = 88;
 SELECT * FROM bus_details WHERE BUSNO = 88;
 
@@ -50,6 +51,35 @@ SELECT * FROM bus_details WHERE BUSNO = 88;
 DELETE FROM bus_details where DEPO = 'peenya';
 UPDATE bus_details SET TIMING = 12 where TIMING = 7;
 
+Create TABLE TheatreList(TheatreName varchar(30) not null,  location varchar(30) unique,  noOfShows int not null unique,  noOfseats int not null unique,  ticketsAvailable int unique,
+			 price int not null,  movieName varchar(30) not null unique,  timings varchar(30) unique,  movieLanguage varchar(30) unique,  noOfPeople int not null, check(ticketsAvailable>=30), check(price<450));
+
+INSERT INTO TheatreList VALUES('Sangam','Gulbarga',5,400,350,380,'Avatar2','7:00 AM','English',380);
+INSERT INTO TheatreList VALUES('Sangam','Bengaluru',7,290,250,400,'Charli','7:00 PM','Kannada',200);
+INSERT INTO TheatreList VALUES('Netravati','Bengaluru',6,300,380,250,'Bhrmastra','9:00 PM','Hindi',300);
+INSERT INTO TheatreList VALUES('Mukta','Gulbarga',7,340,380,280,'Druvatare','5:00 PM','kannada',400);
+INSERT INTO TheatreList VALUES('SRS','Hubbali',4,300,280,350,'Yajamana','8:00 PM','kannada',300);
+INSERT INTO TheatreList VALUES('Bigcinemas','Dharwad',6,380,350,0,'Badavarascal','9:00 AM','Kannada',200);
+INSERT INTO TheatreList VALUES('Esquare','Bidar',4,300,260,200,'Pailwan','7:00 PM','Kannada',290);
+INSERT INTO TheatreList VALUES('PVR','Chikkmanguluru',6,320,300,250,'Ashique2','10:00 AM','Hindi',300);
+INSERT INTO TheatreList VALUES('Cinipolis','Belgaum',4,500,490,400,'Sita Ramam','11:30 AM','Telagu',400);
+INSERT INTO TheatreList VALUES('Sathyam','Gadag',6,250,240,190,'Vikram Vedam','11:35 AM','Telagu',200);
+
+select * from theatreList;
+
+ select dayofdate('2022-12-23');
+ select dayofmonth('2022-04-13')as day;
+ select datedidff('2022-12-24', '2022-11-20');
+ select dayname('2000-11-20');
+ 
+ select quarter('2022-12-23');
+ select adddate('2022-12-21',interval 5 day);
+select adddate('2022-12-23 08:40:59', interval -5 Minute);
+ select adddate('2022-12-21',interval 5 week);
+ select adddate('2022-12-21',interval 5 month);
+ select adddate('2022-12-21',interval 5 Quarter);
+ select adddate('2022-12-21',interval -50 year);
+ select adddate('2022-12-21',interval 5 year);
 
 
 
