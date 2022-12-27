@@ -80,8 +80,8 @@ select substr('basavkalyan',1,5) from taluka_information;
 select substr('basavkalyan',1,5) as str;
 
 select ltrim('           banshankari')as devi;
-select rtrim('yalahanka        ')as taluk;
-select rtrim(ltrim('           soudatti         '))as Yellamma;
+select rtrim('yalahanka       ')as taluk;
+select rtrim(ltrim('           soudatti           '))as Yellamma;
 
 select count(*) from taluka_information;
 select count(name) from taluka_information;
@@ -119,3 +119,10 @@ select adddate('2022-12-23 08:40:59', interval -5 Minute);
  select adddate('2022-12-21',interval -50 year);
  
  select adddate('2022-12-21',interval 5 year);
+ select dayname('2000-07-14');
+select dayname('2001-02-04');
+select dayname('1998-08-01');
+select dayname('1997-04-05');
+select dayname('2001-03-24');
+select dayname('2000-11-18');
+select dayname('1999-11-26');
